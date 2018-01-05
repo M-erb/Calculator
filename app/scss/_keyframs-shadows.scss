@@ -1,0 +1,99 @@
+// keyframs
+@keyframes fadeInDownShort {
+  from {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+.fadeInDownShort {
+  animation-name: fadeInDownShort;
+}
+@keyframes DropInDownFull {
+  from {
+    transform: translate3d(0, -120%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.DropInDownFull {
+  animation-name: DropInDownFull;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0)
+  }
+}
+.grow_width {
+  animation-name: grow;
+}
+
+@keyframes loadingSpin {
+  0% {
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadingPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Vue.js transitions
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
+
+// shadows @extend .shadow_1
+.shadow_1 {
+  box-shadow: 0 6px 28px -3px rgba(50,55,56,.2);
+}
+.shadow_1_5 {
+  box-shadow: 0 6px 36px -3px rgba(50,55,56,.4);
+}
+.shadow_2 {
+  box-shadow: 0 9px 36px -5px rgba(50,55,56,.2);
+}
+.shadow_2_5 {
+  box-shadow: 0 9px 56px -5px rgba(50,55,56,.4);
+}
+.shadow_3 {
+  box-shadow: 0 12px 36px -8px rgba(50,55,56,.6);
+}
+
+
+.shadow_border {
+  box-shadow: 0 0 1px rgba(0,0,0,.4);
+}
+.shadow_border2 {
+  box-shadow: 0 0 3px rgba(0,0,0,.4);
+}

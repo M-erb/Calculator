@@ -1,0 +1,21 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $titlesFont, sans-serif;
+  color: $gray;
+}
+
+a {
+  color: $colorPrimary;
+  cursor: pointer;
+  text-decoration: underline;
+  outline: none;
+}
+
+.custom_content {
+  p {
+    // font-size: 1rem;
+  }
+}
+
+* {
+  outline: none;
+}

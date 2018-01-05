@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brunch Vue and SASS</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+
+	<main id="app">
+        <screen-display></screen-display>
+        <div class="calc-body">
+            <div class="calc-display">
+                <!-- <input type="text" v-model="display"> -->
+                <p>{{display}}</p>
+            </div>
+            <div class="calc-inputs">
+                <button class="btn" aria-label="One" v-on:click="addToEntries('1')">1</button>
+                <button class="btn" aria-label="Two" v-on:click="addToEntries('2')">2</button>
+                <button class="btn" aria-label="Three" v-on:click="addToEntries('3')">3</button>
+                <button class="btn" aria-label="Four" v-on:click="addToEntries('4')">4</button>
+                <button class="btn" aria-label="Five" v-on:click="addToEntries('5')">5</button>
+                <button class="btn" aria-label="Six" v-on:click="addToEntries('6')">6</button>
+                <button class="btn" aria-label="Seven" v-on:click="addToEntries('7')">7</button>
+                <button class="btn" aria-label="Eight" v-on:click="addToEntries('8')">8</button>
+                <button class="btn" aria-label="Nine" v-on:click="addToEntries('9')">9</button>
+                <button class="btn" aria-label="Zero" v-on:click="addToEntries('0')">0</button>
+                <button class="btn" aria-label="Period" v-on:click="addToEntries('.')">.</button>
+            </div>
+            <div class="calc-operators">
+                <button class="btn" aria-label="add" v-on:click="addToEntries('+')">+</button>
+                <button class="btn" aria-label="subtract">-</button>
+                <button class="btn" aria-label="multiply">*</button>
+                <button class="btn" aria-label="divide">/</button>
+                <button class="btn" aria-label="equals" v-on:click="evaluate">=</button>
+            </div>
+            <div class="testing">
+                <p>this.entries</p>
+                <pre>{{entries}}</pre>
+            </div>
+        </div>
+	</main>
+
+    <!-- <script src="https://unpkg.com/vue"></script> -->
+	<!-- <script type="text/javascript" src="/vendor.js"></script> -->
+	<script type="text/javascript" src="/app.js"></script>
+	<script type="text/javascript">
+		require('main');
+	</script>
+
+</body>
+
+</html>

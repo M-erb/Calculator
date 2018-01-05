@@ -1,0 +1,50 @@
+// general colors and controls
+$black: #323738;
+$dark_gray: #4f5151; //#595959
+$gray: #828282;
+$mid_gray: #B2B2B2;
+$light_gray: #dcdbdb;// F0F0F0
+$x_light_gray: lighten($light_gray, 5);
+$extra_light_gray: #F6F6F6;
+$difused_gray: rgba(239, 241, 244, 0.8);
+$controls: #ACB5BF;
+$placeholder: rgba(180,180,180,.6);
+$approved: #2ecc71;
+$warning: #DE3636;
+
+//  color palette
+$colorPrimary: #8EC63F;
+$colorSecondary: #7F1218;
+$colorAccent: #818285;//C1CAD6
+$colorNotice: #e74c3c;//FF4349
+$colorBase: #FFFFFF;
+
+// nav colors
+$nav_c: $black;
+$nav_alt: #fff;
+$nav_bkgd: transparent;
+$nav_bkgd_alt: rgba(41,41,41,.9);
+$nav_break_point: 967px;
+
+// fonts
+$titlesFont: oxygen, sans-serif;
+$readFont: oxygen, sans-serif;
+$controlsFont: $readFont;
+
+@mixin titleStyle {
+  font-family: $titlesFont;
+  font-weight: 600;
+}
+
+// header
+$headerHeight: 50px;
+
+//vue.js
+[v-cloak] {
+  display: none;
+}
+
+// temp
+#content {
+  min-height: 100vh;
+}
