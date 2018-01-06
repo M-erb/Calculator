@@ -42,12 +42,8 @@ module.exports.root = new Vue({
             return num
         },
         setOperator(opp) {
-            switch(opp) {
-                case '+':
-                    this.operator = opp
-                    this.evaluate()
-                    break
-            }
+            this.operator = opp
+            this.evaluate()
         },
         equals() {
             console.log('equals started')
@@ -55,13 +51,44 @@ module.exports.root = new Vue({
                 case '+':
                     console.log('Plus found')
                     this.addition(this.currTotal, this.evaluate())
+                    break
+                case '-':
+                    console.log('Minus found')
+                    this.subtraction(this.currTotal, this.evaluate())
+                    break
+                case '*':
+                    console.log('Times found')
+                    this.multiply(this.currTotal, this.evaluate())
+                    break
+                case '/':
+                    console.log('Divide found')
+                    this.divition(this.currTotal, this.evaluate())
+                    break
+                default:
+                    // do nothing as no operator has been selected yet
             }
-            this.operator = ''
         },
         addition(a, b) {
             console.log('addition started', a, b)
             this.currTotal = a + b
-            // console.log('evaluated', this.currTotal)
+        },
+        subtraction(a, b) {
+            console.log('subtraction started', a, b)
+            this.currTotal = a - b
+        },
+        multiply(a, b) {
+            console.log('multiply started', a, b)
+            this.currTotal = a * b
+        },
+        divition(a, b) {
+            console.log('divition started', a, b)
+            this.currTotal = a / b
+        },
+        clearAll() {
+            this.currTotal = null
+            this.cacheNum = null
+            this.entries = []
+            this.operator = ''
         },
 
 
@@ -95,6 +122,6 @@ module.exports.root = new Vue({
         }
     },
     mounted: function () {
-        this.activate()
+        // this.activate()
     }
 })
