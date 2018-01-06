@@ -8,25 +8,66 @@ module.exports.root = new Vue({
         location: window.location,
         htmlBody: document.querySelector('body'),
         display: '',
+        currTotal: null,
+        cacheNum: null,
         entries: [],
+        operator: '',
         history: []
     },
     methods: {
-        addToEntries(input) {
+        pushToEntries(input) {
             this.entries.push(input)
         },
         evaluate() {
-            var nums = []
-            this.entries.forEach(item => {
-                
-            })
-            // TODO: figure out how to evaluate this
+            console.log('evaluate started', this.currTotal)
+            var num = ''
+            if (this.entries.length > 0) {
+                this.entries.forEach(item => {
+                    num = num + item
+                })
+                num = Number(num)
+
+                if (this.getValueType(this.currTotal) === 'null') {
+                    console.log('testing currTotal', num, this.currTotal)
+                    this.currTotal = num
+                } else {
+                    console.log('testing cacheNum', num, this.cacheNum)
+                    this.cacheNum = num
+                }
+            } else {
+                num = this.cacheNum
+            }
+            
+            this.entries = []
+            return num
+        },
+        setOperator(opp) {
+            switch(opp) {
+                case '+':
+                    this.operator = opp
+                    this.evaluate()
+                    break
+            }
+        },
+        equals() {
+            console.log('equals started')
+            switch (this.operator) {
+                case '+':
+                    console.log('Plus found')
+                    this.addition(this.currTotal, this.evaluate())
+            }
+            this.operator = ''
+        },
+        addition(a, b) {
+            console.log('addition started', a, b)
+            this.currTotal = a + b
+            // console.log('evaluated', this.currTotal)
         },
 
 
-
-
-
+        getValueType(val) {
+            return Object.prototype.toString.call(val).slice(8, -1).toLowerCase()
+        },
         round(value, exp) {
             if (typeof exp === 'undefined' || +exp === 0)
                 return Math.round(value);

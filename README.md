@@ -2,6 +2,10 @@
 
 A Basic Calculator using [Vue.js](https://vuejs.org/)
 
+## Note:
+
+VERY WIP and under construction at the moment.
+
 ## Installation
 
 1. Install Brunch globally
