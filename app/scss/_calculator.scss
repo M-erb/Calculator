@@ -9,8 +9,20 @@
   border-radius: 3px;
   button {
     background-color: #fff;
+    &.btn_square {
+      // padding: 0 0 25% 0;
+      // width: 25%;
+    }
   }
   .calc-display {
     flex: 0 0 100%;
+  }
+  .calc-inputs, .calc-operators {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+    button {
+      margin: 8px;
+    }
   }
 }

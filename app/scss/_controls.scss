@@ -16,7 +16,6 @@
   text-decoration: none;
   border-radius: 3px;
   border: none;
-  border: 0;
   outline: none;
   display: inline-block;
   transition: all .3s;
@@ -34,7 +33,15 @@
 
 .btn_square {
   @extend .btn;
-  padding: 0.8rem 1.3rem;
+  padding: 0 0 48px 0;
+  width: 48px;
+  height: auto;
+  position: relative;
+  span {
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .btn_white {
