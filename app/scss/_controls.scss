@@ -21,15 +21,20 @@
   display: inline-block;
   transition: all .3s;
   white-space: nowrap;
-  box-shadow: 2px 2px 4px rgba($black,0.3);
+  // box-shadow: 2px 2px 4px rgba($black,0.3);
   text-transform: capitalize;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   &:hover {
-    box-shadow: 4px 4px 3px rgba($black,0.2);
+    // box-shadow: 4px 4px 3px rgba($black,0.2);
   }
+}
+
+.btn_square {
+  @extend .btn;
+  padding: 0.8rem 1.3rem;
 }
 
 .btn_white {
@@ -351,18 +356,3 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
 
 /*form validation*/
 
-@media only screen and (max-width: 420px){
-    .btn {
-        font-size: 0.9rem;
-        font-weight: bold;
-        padding: 0.8rem 1.8rem;
-        border-radius: 2px;
-        box-shadow: 6px 6px 3px rgba($gray,0.8);
-        &:hover {
-            box-shadow: 6px 6px 3px rgba($gray,0.8);
-        }
-        &:active {
-            transform: scale(0.9);
-        }
-    }
-}

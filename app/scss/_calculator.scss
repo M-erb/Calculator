@@ -1,0 +1,16 @@
+.calc-body {
+  max-width: 500px;
+  width: 98%;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $light_gray;
+  border-radius: 3px;
+  button {
+    background-color: #fff;
+  }
+  .calc-display {
+    flex: 0 0 100%;
+  }
+}

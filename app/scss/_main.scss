@@ -208,16 +208,17 @@ a:focus, .button:focus, .button.alt:focus, .button.added_to_cart:focus, .button.
 }
 
 .testing {
-    background-color: $light_gray;
+  background-color: $light_gray;
+  border-radius: 3px;
+  max-width: 500px;
+  width: 95%;
+  margin: 36px auto;
+  padding: 16px;
+  flex: 0 0 100%;
+  pre {
+    background-color: $dark_gray;
+    color: $approved;
     border-radius: 3px;
-    max-width: 500px;
-    width: 95%;
-    margin: 36px auto;
     padding: 16px;
-    pre {
-        background-color: $dark_gray;
-        color: $approved;
-        border-radius: 3px;
-        padding: 16px;
-    }
+  }
 }
