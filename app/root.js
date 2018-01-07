@@ -7,12 +7,20 @@ module.exports.root = new Vue({
     data: {
         location: window.location,
         htmlBody: document.querySelector('body'),
-        display: '',
         currTotal: null,
         cacheNum: null,
         entries: [],
         operator: '',
         history: []
+    },
+    computed: {
+      display() {
+        var num = ''
+        this.entries.forEach(item => {
+          num = num + item
+        })
+        return num = Number(num)
+      }
     },
     methods: {
         pushToEntries(input) {
