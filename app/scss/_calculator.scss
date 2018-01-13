@@ -1,8 +1,8 @@
 .calc-body {
   max-width: 500px;
   width: 98%;
-  margin: 0 auto;
-  padding: 16px;
+  // margin: 0 auto;
+  padding: 24px;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
@@ -11,14 +11,31 @@
   button {
     background-color: #fff;
     span {
-      font-size: calc(2vw + 16px);
+      font-size: 30px;
+      @media (max-width: 700px) {
+        font-size: calc(2vw + 16px);
+      }
     }
     &.alt {
       background-color: lighten($light_gray, 5);
+      &:hover {
+        color: #302B2C;
+        background-color: darken($light_gray, 5);
+      }
     }
   }
   .calc-display {
     flex: 0 0 100%;
+    margin-bottom: 24px;
+    div {
+      background-color: $dark_gray;
+      color: $approved;
+      border-radius: 3px;
+      padding: 16px;
+      text-align: right;
+      min-height: 57px;
+      width: 100%;
+    }
   }
   .calc-inputs, .calc-operators {
     display: flex;
@@ -35,11 +52,4 @@
       width: calc(25% - 16px);
     }
   }
-  // .calc-operators {
-  //   flex: 1 1 20%;
-  //   button {
-  //     padding: 0 0 calc(100% - 16px) 0;
-  //     width: calc(100% - 16px);
-  //   }
-  // }
 }
