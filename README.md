@@ -4,7 +4,7 @@ A Basic Calculator using [Vue.js](https://vuejs.org/)
 
 ## Note:
 
-A simple calculator built using vuejs and brunchjs.
+A simple calculator built using vuejs and brunchjs. This was a concept I had as I was driving into work one day. Let me know of any other curious ways to create calculators. This was my first time and was very entertaining.
 
 Features:
 
