@@ -47,3 +47,9 @@ You can clone this repo manually!
 ## Issues
 
 Feel free to create an issue or pull request for any bugs you may find. This was a concept I had as I was driving into work one day. Let me know of any other curious ways to create calculators. This was my first time and was very entertaining.
+
+## TODO:
+
+# Create a History of calculations
+# Add tests for key methods
+# Make code less jumbled
