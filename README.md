@@ -12,6 +12,8 @@ Features:
 * Calculates out come based on operator used/ selected
 * KEYBOARD Support!
 
+[DEMO on codepen.io](https://codepen.io/merb/pen/OzEzXW)
+
 Made by Merb with Love for Fun.
 
 ## Installation
