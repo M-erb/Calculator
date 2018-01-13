@@ -12,53 +12,38 @@
 <body>
 
 	<main id="app">
-    <screen-display></screen-display>
-      <div class="calc-body">
-        <div class="calc-display">
-          <!-- <input type="text" v-model="display"> -->
-          <p>{{display}}</p>
-          <p>Current Total: {{currTotal}}</p>
-        </div>
-        <div class="calc-inputs">
-          <button class="btn_square alt" aria-label="Clear All" v-on:click="clearAll"><span>C</span></button>
-          <button class="btn_square alt" aria-label="Clear" v-on:click="clearAll"><span>CE</span></button>
-          <button class="btn_square alt" aria-label="Clear"><span></span></button>
-          <button class="btn_square alt" aria-label="add" v-on:click="setOperator('+')"><span>+</span></button>
-
-          <button class="btn_square" aria-label="Seven" v-on:click="pushToEntries('7')"><span>7</span></button>
-          <button class="btn_square" aria-label="Eight" v-on:click="pushToEntries('8')"><span>8</span></button>
-          <button class="btn_square" aria-label="Nine" v-on:click="pushToEntries('9')"><span>9</span></button>
-          <button class="btn_square alt" aria-label="subtract" v-on:click="setOperator('-')"><span>-</span></button>
-
-          <button class="btn_square" aria-label="Four" v-on:click="pushToEntries('4')"><span>4</span></button>
-          <button class="btn_square" aria-label="Five" v-on:click="pushToEntries('5')"><span>5</span></button>
-          <button class="btn_square" aria-label="Six" v-on:click="pushToEntries('6')"><span>6</span></button>
-          <button class="btn_square alt" aria-label="multiply" v-on:click="setOperator('*')"><span>*</span></button>
-
-          <button class="btn_square" aria-label="One" v-on:click="pushToEntries('1')"><span>1</span></button>
-          <button class="btn_square" aria-label="Two" v-on:click="pushToEntries('2')"><span>2</span></button>
-          <button class="btn_square" aria-label="Three" v-on:click="pushToEntries('3')"><span>3</span></button>
-          <button class="btn_square alt" aria-label="divide" v-on:click="setOperator('/')"><span>/</span></button>
-
-          <button class="btn_square alt" aria-label="Positive or Negative Toggle"><span>+/-</span></button>
-          <button class="btn_square" aria-label="Zero" v-on:click="pushToEntries('0')"><span>0</span></button>
-          <button class="btn_square alt" aria-label="Period" v-on:click="pushToEntries('.')"><span>.</span></button>
-          <button class="btn_square alt" aria-label="equals" v-on:click="equals"><span>=</span></button>
-        </div>
-        <!-- <div class="calc-operators">
-          <button class="btn_square" aria-label="Clear All" v-on:click="clearAll"><span>C</span></button>
-          <button class="btn_square" aria-label="Clear" v-on:click="clearAll"><span>CE</span></button>
-          <button class="btn_square" aria-label="add" v-on:click="setOperator('+')"><span>+</span></button>
-          <button class="btn_square" aria-label="subtract" v-on:click="setOperator('-')"><span>-</span></button>
-          <button class="btn_square" aria-label="multiply" v-on:click="setOperator('*')"><span>*</span></button>
-          <button class="btn_square" aria-label="divide" v-on:click="setOperator('/')"><span>/</span></button>
-          <button class="btn_square" aria-label="equals" v-on:click="equals"><span>=</span></button>
-        </div> -->
-        <div class="testing">
-          <p>this.entries</p>
-          <pre>{{entries}}</pre>
-        </div>
+    <!-- <screen-display></screen-display> -->
+    <div class="calc-body">
+      <div class="calc-display">
+        <div>{{display}}</div>
       </div>
+      <div class="calc-inputs">
+        <button class="btn_square alt" aria-label="Clear All" v-on:click="clearAll"><span>C</span></button>
+        <button class="btn_square alt" aria-label="Clear" v-on:click="clearAll"><span>CE</span></button>
+        <button class="btn_square alt" aria-label="Clear"><span></span></button>
+        <button class="btn_square alt" aria-label="add" v-on:click="setOperator('+')"><span>+</span></button>
+
+        <button class="btn_square" aria-label="Seven" v-on:click="pushToEntries('7')"><span>7</span></button>
+        <button class="btn_square" aria-label="Eight" v-on:click="pushToEntries('8')"><span>8</span></button>
+        <button class="btn_square" aria-label="Nine" v-on:click="pushToEntries('9')"><span>9</span></button>
+        <button class="btn_square alt" aria-label="subtract" v-on:click="setOperator('-')"><span>-</span></button>
+
+        <button class="btn_square" aria-label="Four" v-on:click="pushToEntries('4')"><span>4</span></button>
+        <button class="btn_square" aria-label="Five" v-on:click="pushToEntries('5')"><span>5</span></button>
+        <button class="btn_square" aria-label="Six" v-on:click="pushToEntries('6')"><span>6</span></button>
+        <button class="btn_square alt" aria-label="multiply" v-on:click="setOperator('*')"><span>*</span></button>
+
+        <button class="btn_square" aria-label="One" v-on:click="pushToEntries('1')"><span>1</span></button>
+        <button class="btn_square" aria-label="Two" v-on:click="pushToEntries('2')"><span>2</span></button>
+        <button class="btn_square" aria-label="Three" v-on:click="pushToEntries('3')"><span>3</span></button>
+        <button class="btn_square alt" aria-label="divide" v-on:click="setOperator('/')"><span>/</span></button>
+
+        <button class="btn_square alt" aria-label="Positive or Negative Toggle" v-on:click="togPosNeg"><span>+/-</span></button>
+        <button class="btn_square" aria-label="Zero" v-on:click="pushToEntries('0')"><span>0</span></button>
+        <button class="btn_square alt" aria-label="Period" v-on:click="pushToEntries('.')"><span>.</span></button>
+        <button class="btn_square alt" aria-label="equals" v-on:click="equals"><span>=</span></button>
+      </div>
+    </div>
 	</main>
 
     <!-- <script src="https://unpkg.com/vue"></script> -->
