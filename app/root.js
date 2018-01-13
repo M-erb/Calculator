@@ -12,7 +12,9 @@ module.exports.root = new Vue({
     entries: ['0'],
     operator: '',
     isPositive: true,
-    history: []
+    history: [],
+    numLibrary: ['0','1','2','3','4','5','6','7','8','9'],
+    operatorLibrary: ['+','-','*','/']
   },
   computed: {
     display() {
@@ -58,8 +60,8 @@ module.exports.root = new Vue({
           this.entries = ['0']
           return num
       },
-      setOperator(opp) {
-          this.operator = opp
+      setOperator(op) {
+          this.operator = op
           this.evaluate()
       },
       equals() {
@@ -148,6 +150,27 @@ module.exports.root = new Vue({
       }
   },
   mounted: function () {
-    
+    const vm = this
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        vm.equals()
+        return
+      } else if (e.key === 'Escape') {
+        vm.clearAll()
+        return
+      }
+      vm.numLibrary.forEach(num => {
+        if (num === e.key) {
+          vm.pushToEntries(e.key)
+          return
+        }
+      })
+      vm.operatorLibrary.forEach(op => {
+        if (op === e.key) {
+          vm.setOperator(e.key)
+          return
+        }
+      })
+    })
   }
 })

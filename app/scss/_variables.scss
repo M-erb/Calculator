@@ -19,13 +19,6 @@ $colorAccent: #818285;//C1CAD6
 $colorNotice: #e74c3c;//FF4349
 $colorBase: #FFFFFF;
 
-// nav colors
-$nav_c: $black;
-$nav_alt: #fff;
-$nav_bkgd: transparent;
-$nav_bkgd_alt: rgba(41,41,41,.9);
-$nav_break_point: 967px;
-
 // fonts
 $titlesFont: oxygen, sans-serif;
 $readFont: oxygen, sans-serif;
@@ -42,9 +35,4 @@ $headerHeight: 50px;
 //vue.js
 [v-cloak] {
   display: none;
-}
-
-// temp
-#content {
-  min-height: 100vh;
 }

@@ -4,7 +4,15 @@ A Basic Calculator using [Vue.js](https://vuejs.org/)
 
 ## Note:
 
-VERY WIP and under construction at the moment.
+A simple calculator built using vuejs and brunchjs.
+
+Features:
+
+* Collects inputs and determines intened number
+* Calculates out come based on operator used/ selected
+* KEYBOARD Support!
+
+Made by Merb with Love for Fun.
 
 ## Installation
 
