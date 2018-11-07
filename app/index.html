@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Brunch Vue and SASS</title>
-    <link rel="stylesheet" href="/app.css">
+    <title>Calculator in Vue and SASS</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
@@ -14,9 +14,11 @@
 	<main id="app">
     <!-- <screen-display></screen-display> -->
     <div class="calc-body">
-      <div class="calc-display">
-        <div>{{display}}</div>
-      </div>
+      <screen-display 
+        :operator="operator"
+        :curr-total="currTotal"
+        :cache-num="cacheNum"
+      ></screen-display>
       <div class="calc-inputs">
         <button class="btn_square alt" aria-label="Clear All" v-on:click="clearAll"><span>C</span></button>
         <button class="btn_square alt" aria-label="Clear" v-on:click="clearAll"><span>CE</span></button>
@@ -46,12 +48,7 @@
     </div>
 	</main>
 
-    <!-- <script src="https://unpkg.com/vue"></script> -->
-	<!-- <script type="text/javascript" src="/vendor.js"></script> -->
 	<script type="text/javascript" src="/app.js"></script>
-	<script type="text/javascript">
-		require('main');
-	</script>
 
 </body>
 
