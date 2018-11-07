@@ -1,20 +1,27 @@
-import Vue from 'vue'
-
-module.exports.siteNav = Vue.component('screen-display', {
-    template: `
-    <div>
-        {{test}}
-    </div>`,
+module.exports = Vue.component('screenDisplay', {
+    template: //html 
+    `
+      <div class="calc-display">
+        <div>{{ currTotal }} {{ operator }} {{ cacheNum }}</div>
+      </div>
+    `,
     data() {
-        return {
-            test: 'hello world'
-        }
+      return {
+        screen: 0
+      }
     },
-    props: [],
-    methods: {
-        
+    props: {
+      operator: {
+        type: String,
+        default: ''
+      },
+      currTotal: {
+        type: Number,
+        default: 0
+      },
+      cacheNum: {
+        type: Number,
+        default: 0
+      }
     },
-    mounted: function() {
-        console.log('site-nav.js')
-    }
 })
